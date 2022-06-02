@@ -19,6 +19,10 @@
 		1A5D23312848C3B800F0D034 /* UIStackView + Exstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23302848C3B800F0D034 /* UIStackView + Exstension.swift */; };
 		1A5D23332848C5AE00F0D034 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23322848C5AE00F0D034 /* CollectionViewCell.swift */; };
 		1A5D23352848C5EF00F0D034 /* VideoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23342848C5EF00F0D034 /* VideoListCell.swift */; };
+		1A5D23372848C6BD00F0D034 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23362848C6BD00F0D034 /* Networking.swift */; };
+		1A5D23392848C6F200F0D034 /* MovieCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23382848C6F200F0D034 /* MovieCard.swift */; };
+		1A5D233B2848C74700F0D034 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D233A2848C74700F0D034 /* MovieData.swift */; };
+		1A5D233D2848C76A00F0D034 /* TVData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D233C2848C76A00F0D034 /* TVData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		1A5D23302848C3B800F0D034 /* UIStackView + Exstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Exstension.swift"; sourceTree = "<group>"; };
 		1A5D23322848C5AE00F0D034 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		1A5D23342848C5EF00F0D034 /* VideoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCell.swift; sourceTree = "<group>"; };
+		1A5D23362848C6BD00F0D034 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		1A5D23382848C6F200F0D034 /* MovieCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCard.swift; sourceTree = "<group>"; };
+		1A5D233A2848C74700F0D034 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
+		1A5D233C2848C76A00F0D034 /* TVData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,9 @@
 		1A5D23232848C26B00F0D034 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1A5D23382848C6F200F0D034 /* MovieCard.swift */,
+				1A5D233A2848C74700F0D034 /* MovieData.swift */,
+				1A5D233C2848C76A00F0D034 /* TVData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +136,7 @@
 		1A5D23262848C2AB00F0D034 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1A5D23362848C6BD00F0D034 /* Networking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -212,12 +224,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A5D232F2848C39900F0D034 /* UIImage + Extension.swift in Sources */,
+				1A5D233D2848C76A00F0D034 /* TVData.swift in Sources */,
+				1A5D23372848C6BD00F0D034 /* Networking.swift in Sources */,
 				1A5D23122847C31D00F0D034 /* MainViewController.swift in Sources */,
 				1A5D23332848C5AE00F0D034 /* CollectionViewCell.swift in Sources */,
 				1A5D23352848C5EF00F0D034 /* VideoListCell.swift in Sources */,
 				1A5D23292848C32200F0D034 /* UINavigationBar + Extension.swift in Sources */,
+				1A5D233B2848C74700F0D034 /* MovieData.swift in Sources */,
 				1A5D23312848C3B800F0D034 /* UIStackView + Exstension.swift in Sources */,
 				1A5D230E2847C31D00F0D034 /* AppDelegate.swift in Sources */,
+				1A5D23392848C6F200F0D034 /* MovieCard.swift in Sources */,
 				1A5D232D2848C38100F0D034 /* UIColor + Extension.swift in Sources */,
 				1A5D232B2848C35C00F0D034 /* Date + Extension.swift in Sources */,
 				1A5D23102847C31D00F0D034 /* SceneDelegate.swift in Sources */,
