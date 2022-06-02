@@ -65,3 +65,18 @@ class MainViewController: UITableViewController {
     }
 
 }
+//MARK: - Set transition
+
+extension MainViewController: EventsCell {
+    func didClick(movie: MovieCard) {
+        print("-------")
+        let name = movie.name ?? "No name!!!"
+        print(name)
+        print("-------")
+        let movieVC = MovieCardController()
+        movieVC.modalPresentationStyle = .fullScreen
+        movieVC.modalTransitionStyle = .coverVertical
+        navigationController?.present(movieVC, animated: true)
+    }
+    
+}
