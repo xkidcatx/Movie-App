@@ -17,6 +17,8 @@
 		1A5D232D2848C38100F0D034 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D232C2848C38100F0D034 /* UIColor + Extension.swift */; };
 		1A5D232F2848C39900F0D034 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D232E2848C39900F0D034 /* UIImage + Extension.swift */; };
 		1A5D23312848C3B800F0D034 /* UIStackView + Exstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23302848C3B800F0D034 /* UIStackView + Exstension.swift */; };
+		1A5D23332848C5AE00F0D034 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23322848C5AE00F0D034 /* CollectionViewCell.swift */; };
+		1A5D23352848C5EF00F0D034 /* VideoListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23342848C5EF00F0D034 /* VideoListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		1A5D232C2848C38100F0D034 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		1A5D232E2848C39900F0D034 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		1A5D23302848C3B800F0D034 /* UIStackView + Exstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Exstension.swift"; sourceTree = "<group>"; };
+		1A5D23322848C5AE00F0D034 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		1A5D23342848C5EF00F0D034 /* VideoListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 		1A5D23242848C27F00F0D034 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A5D23322848C5AE00F0D034 /* CollectionViewCell.swift */,
+				1A5D23342848C5EF00F0D034 /* VideoListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +213,8 @@
 			files = (
 				1A5D232F2848C39900F0D034 /* UIImage + Extension.swift in Sources */,
 				1A5D23122847C31D00F0D034 /* MainViewController.swift in Sources */,
+				1A5D23332848C5AE00F0D034 /* CollectionViewCell.swift in Sources */,
+				1A5D23352848C5EF00F0D034 /* VideoListCell.swift in Sources */,
 				1A5D23292848C32200F0D034 /* UINavigationBar + Extension.swift in Sources */,
 				1A5D23312848C3B800F0D034 /* UIStackView + Exstension.swift in Sources */,
 				1A5D230E2847C31D00F0D034 /* AppDelegate.swift in Sources */,
