@@ -17,6 +17,9 @@ class MainViewController: UITableViewController {
     
     private let allCAtegories = Categories.allCases
     
+    private let searchBar = UISearchController()
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.setupNavigationBar(barColor: .darkBackgound, textColor: .red)
         navigationItem.title = "Кинопоиск"
@@ -42,6 +45,9 @@ class MainViewController: UITableViewController {
         tableView.rowHeight = 300
         tableView.separatorStyle = .singleLine
         view.backgroundColor = .darkBackgound
+        navigationItem.searchController = searchBar
+        searchBar.searchBar.placeholder = "Поиск"
+        searchBar.searchBar.returnKeyType = .search
         
     }
     

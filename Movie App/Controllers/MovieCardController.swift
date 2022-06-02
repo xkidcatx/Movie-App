@@ -80,6 +80,17 @@ class MovieCardController: UIViewController {
     
     private let actorView = ActorView()
     
+    private let watchNowButton: UIButton = {
+        $0.setTitle("Cмотреть онлайн", for: .normal)
+        $0.backgroundColor = .red
+        $0.tintColor = .white
+        $0.layer.cornerRadius = 15
+        $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        $0.titleLabel?.textColor = .white
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UIButton(type: .system))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -111,6 +122,7 @@ class MovieCardController: UIViewController {
         view.addSubview(labelStack)
         view.addSubview(castLabel)
         view.addSubview(actorView)
+        view.addSubview(watchNowButton)
         
     }
 
@@ -120,7 +132,7 @@ class MovieCardController: UIViewController {
         posterView.topAnchor.constraint(equalTo: view.topAnchor),
         posterView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
         posterView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-        posterView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3)
+        posterView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.25)
         ])
         
         NSLayoutConstraint.activate([
@@ -129,7 +141,7 @@ class MovieCardController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            movieTitle.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -45),
+            movieTitle.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -65),
             movieTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
@@ -152,8 +164,16 @@ class MovieCardController: UIViewController {
         NSLayoutConstraint.activate([
             actorView.topAnchor.constraint(equalTo: castLabel.bottomAnchor, constant: 5),
             actorView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            actorView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            actorView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            actorView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
         ])
+        
+        NSLayoutConstraint.activate([
+            watchNowButton.heightAnchor.constraint(equalToConstant: 50),
+            watchNowButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            watchNowButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            watchNowButton.topAnchor.constraint(equalTo: actorView.bottomAnchor, constant: 5),
+            watchNowButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
     }
 }

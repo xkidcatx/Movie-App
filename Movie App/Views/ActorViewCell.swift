@@ -80,7 +80,7 @@ class ActorViewCell: UICollectionViewCell {
         ])
         
         NSLayoutConstraint.activate([
-            characterNameLabel.topAnchor.constraint(equalTo: actorNameLabel.bottomAnchor, constant: 5),
+            characterNameLabel.topAnchor.constraint(equalTo: actorNameLabel.bottomAnchor, constant: 0),
             characterNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
             characterNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5)
         ])
