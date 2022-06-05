@@ -8,5 +8,7 @@
 import UIKit
 
 extension UIColor {
-    static let darkBackgound = #colorLiteral(red: 0.1764705882, green: 0.1568627451, blue: 0.2078431373, alpha: 1)
+    static let mintColor = UIColor(named: "mintColor")
+    static let turquoiseColor = UIColor(named: "turquoiseColor")
+    static let deepBlueColor = UIColor(named: "deepBlueColor")
 }

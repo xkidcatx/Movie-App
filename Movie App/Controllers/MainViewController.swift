@@ -17,13 +17,7 @@ class MainViewController: UITableViewController {
     
     private let allCAtegories = Categories.allCases
     
-    private let searchBar = UISearchController()
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.setupNavigationBar(barColor: .darkBackgound, textColor: .red)
-        navigationItem.title = "Кинопоиск"
-    }
+    private let tabBar = UITabBarController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +38,7 @@ class MainViewController: UITableViewController {
         tableView.register(VideoListCell.self, forCellReuseIdentifier: VideoListCell.identifier)
         tableView.rowHeight = 300
         tableView.separatorStyle = .singleLine
-        view.backgroundColor = .darkBackgound
-        navigationItem.searchController = searchBar
-        searchBar.searchBar.placeholder = "Поиск"
-        searchBar.searchBar.returnKeyType = .search
+        view.backgroundColor = UIColor(named: "deepBlueColor")
         
     }
     
@@ -79,7 +70,7 @@ extension MainViewController: EventsCell {
         let name = movie.name ?? "No name!!!"
         print(name)
         print("-------")
-        let movieVC = MovieCardController()
+        let movieVC = MovieCardController(movieCard: movie, networking: network)
         movieVC.modalPresentationStyle = .fullScreen
         movieVC.modalTransitionStyle = .coverVertical
         navigationController?.present(movieVC, animated: true)

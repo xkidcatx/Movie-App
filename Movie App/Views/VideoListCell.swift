@@ -31,7 +31,7 @@ class VideoListCell: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .darkBackgound
+        collectionView.backgroundColor = UIColor(named: "deepBlueColor")
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -54,7 +54,7 @@ class VideoListCell: UITableViewCell {
     }
     
     private func setupViews() {
-        backgroundColor = .darkBackgound
+        backgroundColor = UIColor(named: "deepBlueColor")
         myCollectionView.register(
             CollectionViewCell.self,
             forCellWithReuseIdentifier: CollectionViewCell.identifier

@@ -24,7 +24,9 @@ struct CategoryMovie {
 }
 
 struct MovieCard {
+    let id: Int
     let name: String?
+    let type: MediaType
     let posterString: String?
     let backdropString: String?
     let dateString: String?
@@ -44,14 +46,14 @@ struct MovieCard {
         return "https://image.tmdb.org/t/p/w500/" + (self.backdropString ?? "")
     }
     var imagePoster: UIImage {
-//        let urlString = "https://image.tmdb.org/t/p/w500/6JjfSchsU6daXk2AKX8EEBjO3Fm.jpg"
-//        let url = URL(string: urlString)
-//        guard let data = try? Data(contentsOf: url!) else {
-//            return UIImage(named: "poster")!
-//        }
-//        return UIImage(data: data)!
+        let urlString = posterUrl
+        let url = URL(string: urlString!)
+        guard let data = try? Data(contentsOf: url!) else {
+            return UIImage(named: "poster")!
+        }
+        return UIImage(data: data)!
         
-        return UIImage(named: "poster")!
+//        return UIImage(named: "poster")!
     }
     
     var imageBackdor: UIImage {
@@ -59,51 +61,58 @@ struct MovieCard {
         return UIImage(named: "poster")!
     }
     
-    init(name: String?, posterString: String, backdropString: String?, dateString: String?, star: Double?, description: String?) {
+    init(id: Int, name: String?,
+         posterString: String,
+         backdropString: String?,
+         dateString: String?,
+         star: Double?,
+         description: String?,
+         type: MediaType) {
+        self.id = id
         self.name = name
         self.posterString = posterString
         self.backdropString = backdropString
         self.dateString = dateString
         self.star = star
         self.description = description
+        self.type = type
     }
     
-    init(name: String) {
-        self.name = name
-//        self.date = nil
-        posterString = nil
-        backdropString = nil
-        dateString = nil
-//        year = nil
-        star = nil
-        description = nil
-//        genre = nil
-//        continueVideo = nil
-//        acterList = nil
-    }
+//    init(name: String) {
+//        self.name = name
+////        self.date = nil
+//        posterString = nil
+//        backdropString = nil
+//        dateString = nil
+////        year = nil
+//        star = nil
+//        description = nil
+////        genre = nil
+////        continueVideo = nil
+////        acterList = nil
+//    }
     
-    static func getFake() -> [MovieCard] {
-        var movies: [MovieCard] = []
-        movies = [
-            MovieCard(name: "Wonder Women"),
-            MovieCard(name: "Betmen"),
-            MovieCard(name: "Spider-Man"),
-            MovieCard(name: "Men in Black"),
-            MovieCard(name: "Halo"),
-            MovieCard(name: "Star Wars"),
-            MovieCard(name: "Alfa")
-        ]
-        return movies
-    }
+
 }
 
-struct Actor {
+struct Actors: Decodable {
+    let id: Int
+    let cast: [Actor]
+}
+
+struct Actor: Decodable {
     let name: String
     let character: String
-    let imageData: Data?
+    let imagePath: String
     
-    var image: UIImage {
-        let image = imageData != nil ? UIImage(data: imageData!)! : UIImage(named: "poster")!
-        return image
+    enum CodingKeys: String, CodingKey {
+        case name
+        case character
+        case imagePath = "profile_path"
     }
+    
+//    var image: UIImage {
+//        let image = imageData != nil ? UIImage(data: imageData!)! : UIImage(named: "poster")!
+//        return image
+//    }
 }

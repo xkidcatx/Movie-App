@@ -27,6 +27,13 @@
 		1A5D23412848C89200F0D034 /* ActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23402848C89200F0D034 /* ActorView.swift */; };
 		1A5D23432848C8BC00F0D034 /* ActorViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23422848C8BC00F0D034 /* ActorViewCell.swift */; };
 		1A5D23452848C8FE00F0D034 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23442848C8FE00F0D034 /* StarView.swift */; };
+		1A5D23472848FDC000F0D034 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5D23462848FDC000F0D034 /* TabBarController.swift */; };
+		1AB189B1284B85DC00F8AA90 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB189B0284B85DB00F8AA90 /* GradientButton.swift */; };
+		1AB189B3284B8A9700F8AA90 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB189B2284B8A9700F8AA90 /* UIView + Extension.swift */; };
+		1AB189B7284B993000F8AA90 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB189B6284B993000F8AA90 /* UserViewController.swift */; };
+		1AB189B9284B99AD00F8AA90 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB189B8284B99AD00F8AA90 /* BookmarksViewController.swift */; };
+		1AB189BB284B9E0300F8AA90 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB189BA284B9E0300F8AA90 /* SettingsViewController.swift */; };
+		FF18BF4C587F3DDDFB75F0BF /* Pods_Movie_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE87BC19691EC2D604C5EF39 /* Pods_Movie_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +59,15 @@
 		1A5D23402848C89200F0D034 /* ActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorView.swift; sourceTree = "<group>"; };
 		1A5D23422848C8BC00F0D034 /* ActorViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorViewCell.swift; sourceTree = "<group>"; };
 		1A5D23442848C8FE00F0D034 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		1A5D23462848FDC000F0D034 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1AB189B0284B85DB00F8AA90 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GradientButton.swift; path = ../../../../../GradientButton.swift; sourceTree = "<group>"; };
+		1AB189B2284B8A9700F8AA90 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		1AB189B6284B993000F8AA90 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		1AB189B8284B99AD00F8AA90 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		1AB189BA284B9E0300F8AA90 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6F249E01887C78ECF1FCB401 /* Pods-Movie App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie App.release.xcconfig"; path = "Target Support Files/Pods-Movie App/Pods-Movie App.release.xcconfig"; sourceTree = "<group>"; };
+		B1E0871E539B48C9448EB7CD /* Pods-Movie App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie App.debug.xcconfig"; path = "Target Support Files/Pods-Movie App/Pods-Movie App.debug.xcconfig"; sourceTree = "<group>"; };
+		FE87BC19691EC2D604C5EF39 /* Pods_Movie_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF18BF4C587F3DDDFB75F0BF /* Pods_Movie_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +87,8 @@
 			children = (
 				1A5D230C2847C31D00F0D034 /* Movie App */,
 				1A5D230B2847C31D00F0D034 /* Products */,
+				D33DC1B620678A1798F16577 /* Pods */,
+				6C803F79C60493040A280CDD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +151,7 @@
 				1A5D23402848C89200F0D034 /* ActorView.swift */,
 				1A5D23422848C8BC00F0D034 /* ActorViewCell.swift */,
 				1A5D23442848C8FE00F0D034 /* StarView.swift */,
+				1AB189B0284B85DB00F8AA90 /* GradientButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +161,10 @@
 			children = (
 				1A5D23112847C31D00F0D034 /* MainViewController.swift */,
 				1A5D233E2848C85C00F0D034 /* MovieCardController.swift */,
+				1A5D23462848FDC000F0D034 /* TabBarController.swift */,
+				1AB189B6284B993000F8AA90 /* UserViewController.swift */,
+				1AB189B8284B99AD00F8AA90 /* BookmarksViewController.swift */,
+				1AB189BA284B9E0300F8AA90 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,8 +185,27 @@
 				1A5D232C2848C38100F0D034 /* UIColor + Extension.swift */,
 				1A5D232E2848C39900F0D034 /* UIImage + Extension.swift */,
 				1A5D23302848C3B800F0D034 /* UIStackView + Exstension.swift */,
+				1AB189B2284B8A9700F8AA90 /* UIView + Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6C803F79C60493040A280CDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE87BC19691EC2D604C5EF39 /* Pods_Movie_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D33DC1B620678A1798F16577 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1E0871E539B48C9448EB7CD /* Pods-Movie App.debug.xcconfig */,
+				6F249E01887C78ECF1FCB401 /* Pods-Movie App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A5D231E2847C31F00F0D034 /* Build configuration list for PBXNativeTarget "Movie App" */;
 			buildPhases = (
+				AB432DF0D9C0DA0B76E60E88 /* [CP] Check Pods Manifest.lock */,
 				1A5D23062847C31D00F0D034 /* Sources */,
 				1A5D23072847C31D00F0D034 /* Frameworks */,
 				1A5D23082847C31D00F0D034 /* Resources */,
+				9B45757A354AD7D7398E7B4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +275,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9B45757A354AD7D7398E7B4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Movie App/Pods-Movie App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Movie App/Pods-Movie App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Movie App/Pods-Movie App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB432DF0D9C0DA0B76E60E88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Movie App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A5D23062847C31D00F0D034 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -238,13 +325,17 @@
 				1A5D23452848C8FE00F0D034 /* StarView.swift in Sources */,
 				1A5D232F2848C39900F0D034 /* UIImage + Extension.swift in Sources */,
 				1A5D233D2848C76A00F0D034 /* TVData.swift in Sources */,
+				1AB189B7284B993000F8AA90 /* UserViewController.swift in Sources */,
 				1A5D23372848C6BD00F0D034 /* Networking.swift in Sources */,
 				1A5D23122847C31D00F0D034 /* MainViewController.swift in Sources */,
+				1AB189B1284B85DC00F8AA90 /* GradientButton.swift in Sources */,
 				1A5D233F2848C85C00F0D034 /* MovieCardController.swift in Sources */,
 				1A5D23332848C5AE00F0D034 /* CollectionViewCell.swift in Sources */,
 				1A5D23352848C5EF00F0D034 /* VideoListCell.swift in Sources */,
 				1A5D23292848C32200F0D034 /* UINavigationBar + Extension.swift in Sources */,
 				1A5D233B2848C74700F0D034 /* MovieData.swift in Sources */,
+				1AB189B3284B8A9700F8AA90 /* UIView + Extension.swift in Sources */,
+				1A5D23472848FDC000F0D034 /* TabBarController.swift in Sources */,
 				1A5D23432848C8BC00F0D034 /* ActorViewCell.swift in Sources */,
 				1A5D23312848C3B800F0D034 /* UIStackView + Exstension.swift in Sources */,
 				1A5D230E2847C31D00F0D034 /* AppDelegate.swift in Sources */,
@@ -252,7 +343,9 @@
 				1A5D232D2848C38100F0D034 /* UIColor + Extension.swift in Sources */,
 				1A5D232B2848C35C00F0D034 /* Date + Extension.swift in Sources */,
 				1A5D23412848C89200F0D034 /* ActorView.swift in Sources */,
+				1AB189B9284B99AD00F8AA90 /* BookmarksViewController.swift in Sources */,
 				1A5D23102847C31D00F0D034 /* SceneDelegate.swift in Sources */,
+				1AB189BB284B9E0300F8AA90 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +479,7 @@
 		};
 		1A5D231F2847C31F00F0D034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1E0871E539B48C9448EB7CD /* Pods-Movie App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -416,6 +510,7 @@
 		};
 		1A5D23202847C31F00F0D034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F249E01887C78ECF1FCB401 /* Pods-Movie App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

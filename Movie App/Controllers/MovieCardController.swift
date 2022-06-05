@@ -9,6 +9,19 @@ import UIKit
 
 class MovieCardController: UIViewController {
     
+    init(movieCard: MovieCard, networking: Networking) {
+        self.networking = networking
+        self.movieCard = movieCard
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private let networking: Networking
+    private let movieCard: MovieCard
+    
     private let closebutton: UIButton = {
         $0.setBackgroundImage(UIImage(named: "closeButton"), for: .normal)
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +40,7 @@ class MovieCardController: UIViewController {
         $0.text = "Криминальное чтиво"
         $0.font = UIFont.boldSystemFont(ofSize: 30)
         $0.textAlignment = .center
+        $0.adjustsFontSizeToFitWidth = true
         $0.textColor = .white
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
@@ -48,13 +62,15 @@ class MovieCardController: UIViewController {
         return $0
     }(UILabel())
     
-    private let longestLabel: UILabel = {
+    private let lenghtLabel: UILabel = {
         $0.text = "2ч 34м"
         $0.font = UIFont.systemFont(ofSize: 18)
         $0.textColor = .white
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
+    
+    private let actorViewCell = ActorViewCell()
     
     let starRating: StarsView = {
         return $0
@@ -63,9 +79,9 @@ class MovieCardController: UIViewController {
     private let rewievLabel: UILabel = {
         $0.text = "Двое бандитов Винсент Вега и Джулс Винфилд проводят время в философских беседах в перерыве между разборками и «решением проблем» с должниками своего криминального босса Марселласа Уоллеса. Параллельно разворачивается три истории. В первой из них Винсент присматривает за женой Марселласа Мией и спасает ее от передозировки наркотиков. Во второй рассказывается о Бутче Кулидже, боксере, нанятом Уоллесом, чтобы сдать бой, но обманувшим его."
         $0.font = UIFont.systemFont(ofSize: 16)
-        $0.numberOfLines = 0
-        $0.textAlignment = .justified
-        $0.textColor = .lightGray
+        $0.numberOfLines = 10
+        $0.textAlignment = .natural
+        $0.textColor = .white
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UILabel())
@@ -80,26 +96,48 @@ class MovieCardController: UIViewController {
     
     private let actorView = ActorView()
     
-    private let watchNowButton: UIButton = {
+    private let watchNowButton: GradientButton = {
         $0.setTitle("Cмотреть онлайн", for: .normal)
-        $0.backgroundColor = .red
         $0.tintColor = .white
         $0.layer.cornerRadius = 15
         $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
         $0.titleLabel?.textColor = .white
+        $0.addShadowOnView()
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
-    }(UIButton(type: .system))
+    }(GradientButton(type: .system))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchActors()
         setupViews()
         setConstraints()
-
+        setupContent()
     }
     
-    func configure(model: MovieCard) {
-        movieTitle.text = model.name
+    private func fetchActors() {
+        networking.fetchActors(at: movieCard.id, type: movieCard.type) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let actors):
+                self.updateActors(actors)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    private func updateActors(_ actors: [Actor]) {
+        DispatchQueue.main.async {
+            print(actors)
+        }
+    }
+    
+    private func setupContent() {
+        posterView.image = movieCard.imagePoster
+        movieTitle.text = movieCard.name
+        rewievLabel.text = movieCard.description
+        yearLabel.text = movieCard.dateString
     }
     
     @objc func closeButtonTapped(_ sender: UIButton) {
@@ -115,7 +153,7 @@ class MovieCardController: UIViewController {
         view.addSubview(closebutton)
         view.addSubview(movieTitle)
         view.addSubview(rewievLabel)
-        labelStack = UIStackView(arrangedSubviews: [yearLabel, genreLabel, longestLabel],
+        labelStack = UIStackView(arrangedSubviews: [yearLabel, genreLabel, lenghtLabel],
                                  axis:.horizontal,
                                  spacing: 5)
         
@@ -142,7 +180,8 @@ class MovieCardController: UIViewController {
         
         NSLayoutConstraint.activate([
             movieTitle.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -65),
-            movieTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            movieTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            movieTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10)
         ])
         
         NSLayoutConstraint.activate([
