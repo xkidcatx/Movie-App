@@ -23,7 +23,7 @@ struct Networking {
     
     static var shared = Networking()
     
-    let movieUrl = "https://api.themoviedb.org/3"
+    static let movieUrl = "https://api.themoviedb.org/3"
     
     private let key = "?api_key=3180eef08dadb9ca352d50241ce95409"
     
@@ -33,10 +33,10 @@ struct Networking {
         
         let fullUrl: String
         switch category {
-        case .trendingAllDay: fullUrl = movieUrl + "/trending/all/day" + key + language
-        case .trendingAllWeek: fullUrl = movieUrl + "/trending/all/week" + key + language
-        case .trendingMovieDay: fullUrl = movieUrl + "/trending/movie/day" + key + language
-        case .trendingMovieWeek: fullUrl = movieUrl + "/trending/movie/week" + key + language
+        case .trendingAllDay: fullUrl = Networking.movieUrl + "/trending/all/day" + key + language
+        case .trendingAllWeek: fullUrl = Networking.movieUrl + "/trending/all/week" + key + language
+        case .trendingMovieDay: fullUrl = Networking.movieUrl + "/trending/movie/day" + key + language
+        case .trendingMovieWeek: fullUrl = Networking.movieUrl + "/trending/movie/week" + key + language
 //        case .tvPopular: fullUrl = movieUrl + "/tv/popular" + key
 //        case .tredingTv: fullUrl = movieUrl + "/trending/tv/week" + key
         }

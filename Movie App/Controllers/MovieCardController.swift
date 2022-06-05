@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MovieCardController: UIViewController {
     
@@ -88,14 +89,26 @@ class MovieCardController: UIViewController {
         $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
         $0.titleLabel?.textColor = .white
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.addTarget(self, action: #selector(watchButtonPressed), for: .touchUpInside)
         return $0
-    }(UIButton(type: .system))
+        }(UIButton(type: .system))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setConstraints()
 
+    }
+    @objc func watchButtonPressed(_ sender: UIButton){
+        
+        if let url = URL(string: Networking.movieUrl )
+        {
+            
+            let safariVC = SFSafariViewController(url: url)
+            present(safariVC, animated: true, completion: nil)
+            
+        }
+        
     }
     
     func configure(model: MovieCard) {
